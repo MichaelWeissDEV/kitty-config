@@ -2,6 +2,9 @@
 
 This guide covers installing the **Kitty** terminal emulator, securing font requirements, and deploying this configuration.
 
+For managed Arch installation, backups and updates, see {doc}`packages`.
+The following standalone setup is a separate alternative.
+
 ---
 
 ## Prerequisites
@@ -47,21 +50,14 @@ Clone the repository directly into your XDG configuration directory:
 # Backup any existing configuration
 [ -d ~/.config/kitty ] && mv ~/.config/kitty ~/.config/kitty.bak
 
-# Clone kittiy-config
-git clone https://github.com/MichaelWeissDEV/kittiy-config.git ~/.config/kitty
+# Clone kitty-config
+git clone https://github.com/MichaelWeissDEV/kitty-config.git ~/.config/kitty
 ```
 
 ### Route B: Inside the Arch Dotfiles Hub
 
-In the parent [Arch Dotfiles Hub](https://arch-dotfiles.readthedocs.io/en/latest/) (`~/git/dotfiles`), Kitty is managed as a Git Subtree and linked automatically:
-
-```bash
-# Link or update via the central CLI program (adot / arch-dot / arch-dotfiles):
-adot links
-adot update kitty
-# or update the entire ecosystem:
-adot update
-```
+Kitty is distributed as the independent `arch-dotfiles-kitty` package.
+See {doc}`packages` for installation and signed `pacman -Syu` updates.
 
 ---
 
@@ -82,7 +78,6 @@ Verify visual characteristics:
 
 ## Rollback & Uninstall
 
-```bash
-rm -rf ~/.config/kitty
-[ -d ~/.config/kitty.bak ] && mv ~/.config/kitty.bak ~/.config/kitty
-```
+For packages, deactivate with `arch-dotfiles-config deactivate kitty` before
+removal; see {doc}`packages`. For a standalone clone, review and move it aside
+before restoring your own backup. Do not delete personal configuration blindly.

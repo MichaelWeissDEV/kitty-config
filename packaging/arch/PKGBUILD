@@ -6,7 +6,7 @@ pkgdesc='Kitty terminal configuration'
 arch=('any')
 url='https://github.com/MichaelWeissDEV/dotfiles'
 license=('LicenseRef-arch-dotfiles-bundle')
-depends=('arch-dotfiles-core>=0.3.0' 'kitty' 'zsh' 'ttf-jetbrains-mono-nerd')
+depends=('arch-dotfiles-core>=0.3.0' 'kitty>=0.28' 'zsh' 'ttf-jetbrains-mono-nerd')
 optdepends=()
 options=('!strip')
 source=('payload.tar.gz')

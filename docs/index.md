@@ -4,7 +4,7 @@
 [![Dotfiles Hub](https://img.shields.io/badge/ecosystem-arch--dotfiles-1793D1?logo=arch-linux&logoColor=white)](https://arch-dotfiles.readthedocs.io/en/latest/)
 [![Theme: Catppuccin Mocha](https://img.shields.io/badge/theme-Catppuccin%20Mocha-cba6f7)](https://github.com/catppuccin/catppuccin)
 [![Platform: Linux | macOS](https://img.shields.io/badge/platform-Arch%20Linux%20%7C%20Linux%20%7C%20macOS-89b4fa)](https://sw.kovidgoyal.net/kitty/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelWeissDEV/kittiy-config/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/MichaelWeissDEV/kitty-config/blob/main/LICENSE)
 
 A clean, GPU-accelerated **Kitty** terminal configuration styled in the official **Catppuccin Mocha** palette with balanced transparency, JetBrainsMono Nerd Font typography, and Powerline tab styling.
 
@@ -31,6 +31,7 @@ A clean, GPU-accelerated **Kitty** terminal configuration styled in the official
 :caption: User Guide
 
 installation
+packages
 configuration
 keybindings
 faq
@@ -54,29 +55,14 @@ Vim (vim-config) <https://vim-config.readthedocs.io/en/latest/>
 ### Standalone Installation
 
 ```bash
-git clone https://github.com/MichaelWeissDEV/kittiy-config.git ~/.config/kitty
+git clone https://github.com/MichaelWeissDEV/kitty-config.git ~/.config/kitty
 kitty
 ```
 
-### In the Arch Dotfiles Repository
+### Managed Arch package
 
-This repository is integrated as a **Git Subtree** at `kitty/` in `~/git/dotfiles` and linked directly to `~/.config/kitty`:
-
-```bash
-# Update everything (system, dotfiles & all subtrees):
-adot update
-# (also available as: arch-dot update / arch-dotfiles update)
-
-# Update only the kitty subtree from upstream:
-adot update kitty
-
-# Inspect status or terminal keybindings:
-adot status
-adot keys terminals
-
-# Push local changes back to upstream:
-adot push kitty
-```
+This repository is independent, not embedded in a parent subtree. See
+{doc}`packages` for installation, signed updates, backups and development.
 
 ---
 
